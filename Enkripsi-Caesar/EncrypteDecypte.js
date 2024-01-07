@@ -15,10 +15,10 @@ function caesarEncrypt(plaintext, shift) {
     if (char.match(/[a-zA-Z]/)) {
       let isUpperCase = char === char.toUpperCase();
       let code = char.charCodeAt(0);
-      let encryptedChar = String.fromCharCode((code - (isUpperCase ? 65 : 97) + shift) % 26 + (isUpperCase ? 65 : 97));
+      let encryptedChar = String.fromCharCode((code - (isUpperCase ? 65 : 97) + shift + 26) % 26 + (isUpperCase ? 65 : 97));
       result += encryptedChar;
     } else {
-      result += char;
+      result += char; // Tambahkan karakter apa adanya jika bukan huruf
     }
   }
 
