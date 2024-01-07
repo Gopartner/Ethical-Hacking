@@ -3,7 +3,7 @@
 menu:
 	@echo "1. Buat branch baru"
 	@echo "2. Pindah ke branch"
-	@echo "3. Selesai (commit dan push)"
+	@echo "3. Selesai (add, commit dan push)"
 	@read -p "Pilih target: " choice; \
 	case $$choice in \
 		1) make new-branch;; \
